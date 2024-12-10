@@ -18,7 +18,7 @@ Fortunately, during the paper review process, the successive releases of [Ground
 
 To request an API key for Grounding DINO 1.5, please follow the steps outlined [here](https://github.com/IDEA-Research/Grounding-DINO-1.5-API?tab=readme-ov-file#api-usage) and install the environment following [this guide](docs/Environment.md#install-with-python39).
 
-We have written an example for the Foggy-Cityscapes dataset. Please write the obtained [TOKEN](https://cloud.deepdataspace.com/dashboard/api-quota) into the bash files in the `scripts/GDINO1.5API/` folder after `MODEL.TEACHER_CLOUD.TOKEN`, and then run the following command. Please refer to [here](#fire-get-start) for detailed explanation.
+We have written an example for the Foggy-Cityscapes dataset. Please write the obtained [TOKEN](https://cloud.deepdataspace.com/dashboard/api-quota) into the bash files in the `scripts/GDINO1.5API/` folder after `MODEL.TEACHER_CLOUD.TOKEN`, and then run the following command. Please refer to [here](https://github.com/Flashkong/COIN?tab=readme-ov-file#-get-start) for detailed explanation.
 ```bash
 conda activate coin3.9api
 bash scripts/GDINO1.5API/test/GDINO1.5API.sh
