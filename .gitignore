@@ -1,0 +1,10 @@
+*.pyc
+/output_GDINO/
+/output_GDINO1.5API/
+/output_GDINO_classonly/
+/output_GLIP/
+/model_zoo/
+/output_modelzoo/
+/datasets/
+/cloud_models/
+/nltk_data/

@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+MODEL:
+  META_ARCHITECTURE: "OpenVocabularyOracleRCNN"
+  RESNETS:
+    OUT_FEATURES: ["res4"]
+  BACKBONE:
+    NAME: "build_clip_image_backbone"
+  MASK_ON: False
+  WEIGHTS: ''
+  ANCHOR_GENERATOR:
+    SIZES: [[32, 64, 128, 256, 512]]
+  #   ASPECT_RATIOS: [[0.5, 1.0, 2.0]]
+  PROPOSAL_GENERATOR:
+    NAME: "RPN"
+  RPN:
+  #   POSITIVE_FRACTION: 0.25
+    PRE_NMS_TOPK_TEST: 6000
+    POST_NMS_TOPK_TEST: 1000
+    IN_FEATURES: ["res4"]
+  ROI_HEADS:
+    NAME: "OpenVocabularyRes5ROIHeads_Oracle"
+    POOLING_TYPE: 'meanpool'
+    IN_FEATURES: ['res4']
+  ROI_BOX_HEAD:
+    POOLER_RESOLUTION: 14 # set 14, because res5 has downsampling.
+    CLS_AGNOSTIC_BBOX_REG: True
+CLOUD:
+  Trainer: "ORACLE"
+
+INPUT:
+  FORMAT: "RGB"
+  MIN_SIZE_TRAIN: (600,)
+  MIN_SIZE_TEST: 600
+DATALOADER:
+  NUM_WORKERS: 2
+VERSION: 2

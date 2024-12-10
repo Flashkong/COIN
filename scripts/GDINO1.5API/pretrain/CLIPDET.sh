@@ -1,0 +1,10 @@
+#!/bin/bash
+
+python train_net.py \
+     --num-gpus 1 \
+     --config configs/coin/PRETRAINS/CLIPDET_foggy.yaml \
+     MODEL.TEACHER_CLOUD.META_ARCHITECTURE GDINO1_5_API \
+     MODEL.TEACHER_CLOUD.PROCESSOR_ARCHITECTURE GDINO_1_5_API_PROCESSOR \
+     MODEL.TEACHER_CLOUD.COLLECT_ARCHITECTURE GDINO_COLLECTOR \
+     MODEL.TEACHER_CLOUD.TOKEN your_token \
+     OUTPUT_DIR output_GDINO1.5API/foggy/pretrain/CLIP

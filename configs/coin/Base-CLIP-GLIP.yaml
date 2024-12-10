@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+MODEL:
+  TEACHER_CLOUD:
+    META_ARCHITECTURE: '' # follow faster rcnn, selecting MIN_SIZE_TEST instances for evaluation
+    PROCESSOR_ARCHITECTURE: 'GLIP' # directly collect from GLIP, not GLIP_PROCESSOR
+    COLLECT_ARCHITECTURE: 'GLIP_COLLECTOR'
+    TYPE: 'GLIP_Swin_L' # swinB or swinT
+    CONFIG_PATH: './configs/GLIP/glip_Swin_L.yaml'
+    WEIGHT: './cloud_models/glip_large_model.pth'
+  TEACHER_OFFLINE:
+    META_ARCHITECTURE: 'CLIP'
+    TEXT_ENCODER: "CLIP_TEXT"
+    COLLECT_ARCHITECTURE: 'CLIP_COLLECTOR'
+  ROI_HEADS:
+    TEACHER_OFFLINE: 'CLIPRes5ROIHeads'
+  BACKBONE:
+    NAME: "build_clip_image_backbone"
+  ROI_BOX_HEAD:
+    POOLER_RESOLUTION: 14
+INPUT:
+  FORMAT: "RGB"
+  TEACHER_CLOUD:
+    MIN_SIZE_TEST: 600 # keep the same with faster rcnn
+  MIN_SIZE_TEST: 600 # clip's size for test
+CLOUD:
+  Trainer: "CLIP"
+VERSION: 2

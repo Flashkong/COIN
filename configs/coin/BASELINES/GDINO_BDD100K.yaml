@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+_BASE_: "../Base-GDINO.yaml"
+MODEL:
+  TEACHER_CLOUD:
+    TEST_THRESHOLD: 0.3
+DATALOADER:
+  NUM_WORKERS: 2
+DATASETS:
+  TRAIN_UNLABEL: ("BDD100Ktrain",)
+  TEST: ("BDD100Kval",)
+TEST:
+  EVALUATOR: "VOCeval"
+
+OUTPUT_DIR: "./output/SIM/"

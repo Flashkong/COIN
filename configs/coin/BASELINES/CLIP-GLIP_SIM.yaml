@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+_BASE_: "../Base-CLIP-GLIP.yaml"
+MODEL:
+  TEACHER_OFFLINE:
+    TYPE: "RN50"
+  RESNETS:
+    DEPTH: 50
+  TEACHER_CLOUD:
+    TEST_THRESHOLD: 0.5
+CLOUD:
+  UPDATE_BACKBONE: False
+DATALOADER:
+  NUM_WORKERS: 2
+DATASETS:
+  STYLE_NAME: 'SIM style'
+  TRAIN_UNLABEL: ("SIMtrainval_car",)
+  TEST: ("SIMtrainval_car",)
+TEST:
+  EVALUATOR: "VOCeval"
+
+OUTPUT_DIR: "./output/SIM/"

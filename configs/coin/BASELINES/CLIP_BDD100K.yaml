@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+_BASE_: "../Base-CLIP.yaml"
+MODEL:
+  TEACHER_OFFLINE:
+    TYPE: "RN50"
+  RESNETS:
+    DEPTH: 50
+  TEACHER_CLOUD:
+    TEST_THRESHOLD: 0.3
+CLOUD:
+  UPDATE_BACKBONE: False
+DATALOADER:
+  NUM_WORKERS: 2
+DATASETS:
+  STYLE_NAME: 'BDD100K style'
+  TRAIN_UNLABEL: ("BDD100Ktrain",)
+  TEST: ("BDD100Kval",)
+TEST:
+  EVALUATOR: "VOCeval"
+
+OUTPUT_DIR: "./output/SIM/"

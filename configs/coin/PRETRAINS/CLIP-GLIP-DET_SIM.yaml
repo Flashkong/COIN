@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+_BASE_: "../Base-Cloud-GLIP.yaml"
+MODEL:
+  TEACHER_OFFLINE:
+    TYPE: "RN50"
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  LR_SCHEDULER_NAME: "WarmupTwoStageMultiStepLR"
+  STEPS: (40000,)
+  FACTOR_LIST: (1, 0.1)
+  MAX_ITER: 50000
+  IMG_PER_BATCH_UNLABEL: 3
+  BASE_LR: 0.001
+  WARMUP_ITERS: 400
+  CHECKPOINT_PERIOD: 1000
+  PER_MODULE_PARAM_WEIGHT: 
+    [{'backbone.encoder.visual': 0.1, 'backbone.encoder.visual.layer4': 0.1, 
+    'backbone.encoder.attnpool': 0.1, 'embedding_tmp': 1.0, 'add_in_embedding': 1.0, 'logit_scale': 0.0,
+    'anchor_generator': 1.0 }]
+DATASETS:
+  STYLE_NAME: 'SIM style'
+  TRAIN_UNLABEL: ("SIMtrainval_car",)
+  TEST: ("SIMtrainval_car",)
+INPUT:
+  RANDOM_FLIP: "horizontal"
+  TEACHER_CLOUD:
+    MIN_CENTER_ZOOM_SIZE: 320
+    COLLECT_AUG: ""  # options: "" "ZOOM&AUG" "ZOOM" "AUG"  If you want to change collect AUG, change it here (pretraining).
+CLOUD:
+  Trainer: "PRETRAIN"
+  PRE_TRAIN_NAME: 'CLIP'
+  PROTOTYPE_UPDATE_START: 5000
+  CLASSES_WEIGHT: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9]
+  LOSS_TEXT_ALIGN_WEIGHT: 10.0
+  LOSS_CLS_WEIGHT: 1.0
+  TEACHER_CLOUD:
+    RPN_SEPARATE_COLLECT: False  # if set False, then RCNN_THRESH is set the same as RPN_THRESH.
+    RPN_THRESH: 0.5
+    RCNN_THRESH: 0.5
+    ZOOM_MATCHER_THRESH: 0.6
+    COLLECT_NMS_THRESH: 0.6
+TEST:
+  EVAL_PERIOD: 1000
+  EVALUATOR: "VOCeval"
+OUTPUT_DIR: "./output/SIM/run"
+VIS_PERIOD: 0
+SEED: 2024

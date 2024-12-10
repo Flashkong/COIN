@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+_BASE_: "./Base-Cloud-CLASSONLY.yaml"
+MODEL:
+  TEACHER_OFFLINE:
+    TYPE: "RN50"
+  RESNETS:
+    DEPTH: 50
+SOLVER:
+  LR_SCHEDULER_NAME: "WarmupTwoStageMultiStepLR"
+  STEPS: (40000, 45000, 60000)
+  FACTOR_LIST: (1, 0.1, 0.5, 0.1)
+  MAX_ITER: 65000
+  IMG_PER_BATCH_UNLABEL: 3
+  BASE_LR: 0.001
+  WARMUP_ITERS: 400
+  CHECKPOINT_PERIOD: 1000
+  PER_MODULE_PARAM_WEIGHT: 
+    [{'backbone.encoder.visual': 0.1, 'backbone.encoder.visual.layer4': 0.1, 
+    'backbone.encoder.attnpool': 0.1, 'embedding_tmp': 1.0, 'add_in_embedding': 1.0, 'logit_scale': 0.0,
+    'anchor_generator': 1.0 }]
+DATASETS:
+  STYLE_NAME: 'foggy cityscapes style'
+  TRAIN_UNLABEL: ("foggytrain_0.02",)
+  TEST: ("foggyval_0.02",)
+INPUT:
+  RANDOM_FLIP: "horizontal"
+CLOUD:
+  Trainer: "CoinTrainer"
+  BURN_UP_STEP: 45000
+  PROTOTYPE_UPDATE_START: 5000
+  CLS_B_THRESH: 0.7
+  CLASSES_WEIGHT: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9]
+  LOSS_TEXT_ALIGN_WEIGHT: 10.0
+  LOSS_CLS_WEIGHT: 1.0
+  LOSS_CLS_B_WEIGHT: 0.1
+  LOSS_DISTILLATION_WEIGHT: 0.1
+  MATCHER:
+    IOU_THRESHOLDS: 0.5
+TEST:
+  EVAL_PERIOD: 1000
+  EVALUATOR: "VOCeval"
+OUTPUT_DIR: "./output/foggy/run"
+VIS_PERIOD: 0
+SEED: 2024

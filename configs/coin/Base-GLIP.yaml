@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+MODEL:
+  TEACHER_CLOUD:
+    META_ARCHITECTURE: 'GLIP' # follow faster rcnn, selecting MIN_SIZE_TEST instances for evaluation
+    TYPE: 'glip_Swin_L' 
+    CONFIG_PATH: './configs/GLIP/glip_Swin_L.yaml'
+    # CONFIG_PATH: 'configs/GLIP/glip_Swin_T_O365_GoldG.yaml'
+    WEIGHT: './cloud_models/glip_large_model.pth'
+    # WEIGHT: 'cloud_models/glip_tiny_model_o365_goldg_cc_sbu.pth'
+INPUT:
+  TEACHER_CLOUD:
+    MIN_SIZE_TEST: 600 # keep the same with faster rcnn
+CLOUD:
+  Trainer: "GLIP"
+VERSION: 2

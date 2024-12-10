@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+MODEL:
+  TEACHER_CLOUD:
+    META_ARCHITECTURE: 'GDINO_CLASSONLY' # follow faster rcnn, selecting MIN_SIZE_TEST instances for evaluation
+    TYPE: 'swinB' # swinB or swinT
+    WEIGHT: './cloud_models/groundingdino_swinb_cogcoor.pth' # change this path when swinT
+    PER_CLASS_TEST: False
+    USE_DINO_TYPE_FILTER: False
+INPUT:
+  TEACHER_CLOUD:
+    MIN_SIZE_TEST: 600 # keep the same with faster rcnn
+CLOUD:
+  Trainer: "GDINO"
+VERSION: 2

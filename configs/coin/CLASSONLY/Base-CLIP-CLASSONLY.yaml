@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+MODEL:
+  TEACHER_CLOUD:
+    META_ARCHITECTURE: '' # follow faster rcnn, selecting MIN_SIZE_TEST instances for evaluation
+    PROCESSOR_ARCHITECTURE: 'GDINO_CLASSONLY' # directly collect from GDINO, not GDINO_PROCESSOR. Because during testing, no post-processing is required
+    COLLECT_ARCHITECTURE: 'GDINO_COLLECTOR'
+    TYPE: 'swinB' # swinB or swinT
+    WEIGHT: './cloud_models/groundingdino_swinb_cogcoor.pth'
+    PER_CLASS_TEST: False
+    USE_DINO_TYPE_FILTER: False
+  TEACHER_OFFLINE:
+    META_ARCHITECTURE: 'CLIP'
+    TEXT_ENCODER: "CLIP_TEXT"
+    COLLECT_ARCHITECTURE: 'CLIP_COLLECTOR'
+  ROI_HEADS:
+    TEACHER_OFFLINE: 'CLIPRes5ROIHeads'
+  BACKBONE:
+    NAME: "build_clip_image_backbone"
+  ROI_BOX_HEAD:
+    POOLER_RESOLUTION: 14
+INPUT:
+  FORMAT: "RGB"
+  TEACHER_CLOUD:
+    MIN_SIZE_TEST: 600 # keep the same with faster rcnn
+  MIN_SIZE_TEST: 600 # clip's size for test
+CLOUD:
+  Trainer: "CLIP"
+VERSION: 2
