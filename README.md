@@ -6,7 +6,7 @@ Welcome to my homepage: [Shuaifeng Li](https://flashkong.github.io).
 
 [`Paper`](https://openreview.net/pdf?id=S8SEjerTTg) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412) | 
 
-We follow the trend of the times and explore an interesting and promising problem, `Cloud Object Detector Adaptation (CODA)`, where the target domain leverages detections provided by a large vision-language cloud detector to build a target detector.
+We follow the trend of the times and explore an interesting and promising problem, `Cloud Object Detector Adaptation (CODA)`, where the target domain leverages detections provided by a large vision-language cloud detector to build a target detector. **Thank to the large cloud model, open target scenarios and categories are able to be adapted, making open-set adaptation no longer a problem.**
 
 ***Please note that CODA does not restrict whether CLIP is used, even though CLIP is used in our method COIN.***
 
