@@ -83,6 +83,13 @@ class GDINO1_5_API(nn.Module):
                 probs[i, :-1] = (1.0 - scores[i]) / (len(self.classes)-1)
                 probs[i, labels[i]] = scores[i]
             probs = probs.to(self.device)
+
+            mask = scores >= self.test_threshold
+            boxes = boxes[mask]
+            scores = scores[mask]
+            labels = labels[mask]
+            probs = probs[mask]
+
             assert boxes.size(0)==labels.size(0)==scores.size(0)==probs.size(0)
         size = (batched_inputs[0]['height'], batched_inputs[0]['width'])
         output = Instances(size)
