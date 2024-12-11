@@ -1,10 +1,33 @@
-# [Cloud Object Detector Adaptation by Integrating Different Source Knowledge (NeurIPS-24)](https://openreview.net/pdf?id=S8SEjerTTg)
 
-[Shuaifeng Li](https://flashkong.github.io), [Mao Ye*](https://scholar.google.com/citations?user=UUbEzBYAAAAJ), [Lihua Zhou](https://scholar.google.com/citations?user=7wECe98AAAAJ), [Nianxin Li](https://scholar.google.com/citations?user=DMey5ssAAAAJ), [Siying Xiao](https://scholar.google.com/citations?user=TosYOUsAAAAJ), [Song Tang](https://scholar.google.com/citations?user=8uhkD9QAAAAJ), [Xiatian Zhu](https://scholar.google.com/citations?user=ZbA-z1cAAAAJ)
+<div align="center">
 
-Welcome to my homepage: [Shuaifeng Li](https://flashkong.github.io).
+<h1> Cloud Object Detector Adaptation by Integrating Different Source Knowledge (NeurIPS-24) </h1>
+
+
+<h5 align="center"> 
+<a href='https://openreview.net/pdf?id=S8SEjerTTg'><img src='https://img.shields.io/badge/📖%20-OpenReview-orange'></a>
+<a href='https://huggingface.co/Flashkong/COIN/tree/main'><img src='https://img.shields.io/badge/🤗-HuggingFace-blue.svg'></a>
+
+[Shuaifeng Li](https://flashkong.github.io)<sup>1</sup>,
+[Mao Ye](https://scholar.google.com/citations?user=UUbEzBYAAAAJ)<sup>1*</sup>,
+[Lihua Zhou](https://scholar.google.com/citations?user=7wECe98AAAAJ)<sup>1</sup>,
+[Nianxin Li](https://scholar.google.com/citations?user=DMey5ssAAAAJ)<sup>1</sup>,
+[Siying Xiao](https://scholar.google.com/citations?user=TosYOUsAAAAJ)<sup>1</sup>,
+[Song Tang](https://scholar.google.com/citations?user=8uhkD9QAAAAJ)<sup>2</sup>,
+[Xiatian Zhu](https://scholar.google.com/citations?user=ZbA-z1cAAAAJ)<sup>3</sup>
+
+
+<sup>1</sup>University of Electronic Science and Technology of China
+
+<sup>2</sup>University of Shanghai for Science and Technology, <sup>3</sup>University of Surrey
 
 [`Paper`](https://openreview.net/pdf?id=S8SEjerTTg) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412) | 
+</h5>
+</div>
+
+# 💥 News
+
+Welcome to my homepage: [Shuaifeng Li](https://flashkong.github.io).
 
 We follow the trend of the times and explore an interesting and promising problem, `Cloud Object Detector Adaptation (CODA)`, where the target domain leverages detections provided by a large vision-language cloud detector to build a target detector. **Thank to the large cloud model, open target scenarios and categories are able to be adapted, making open-set adaptation no longer a problem.**
 
