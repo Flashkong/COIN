@@ -21,7 +21,7 @@
 
 <sup>2</sup>University of Shanghai for Science and Technology, <sup>3</sup>University of Surrey
 
-[`Paper`](https://openreview.net/pdf?id=S8SEjerTTg) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412) | 
+[`Paper`](https://openreview.net/pdf?id=S8SEjerTTg) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412) | [`小红书`](http://xhslink.com/a/72l2748aVCr1)
 </h5>
 </div>
 
