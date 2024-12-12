@@ -129,7 +129,7 @@ python train_net.py \
      --config configs/coin/GDINO/foggy.yaml \
      --eval-only \
      --test_model_role targetdet \
-     MODEL.WEIGHTS your checkpint path \
+     MODEL.WEIGHTS your_checkpint_path \
      OUTPUT_DIR output_GDINO/foggy/test_targetdet
 ```
 
