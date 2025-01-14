@@ -31,7 +31,9 @@ Welcome to my homepage: [Shuaifeng Li](https://flashkong.github.io).
 
 We follow the trend of the times and explore an interesting and promising problem, `Cloud Object Detector Adaptation (CODA)`, where the target domain leverages detections provided by a large vision-language cloud detector to build a target detector. **Thank to the large cloud model, open target scenarios and categories are able to be adapted, making open-set adaptation no longer a problem.**
 
-*Please note that CODA aims to adapt/distill the cloud detector to target domain, e.g., a target detector, so the use of CLIP is optional. To address the CODA problem, our method, COIN, employs CLIP; however, **this does not imply that the CODA problem setting assumes the existence of a local (CLIP or source domain) detector.** Please keep this distinction in mind.*
+*Please note that CODA aims to adapt/distill the cloud detector to target domain, e.g., a target detector, so the use of CLIP is optional. To address the CODA problem, our method, COIN, employs CLIP; however, **this does not imply that the CODA problem setting assumes the existence of a local (CLIP or source domain) detector, nor does it assume that CLIP must necessarily be used.** Please keep this distinction in mind.*
+
+
 
 🎯 Our previous CVPR'22 ORAL work, `Source-Free Object Detection by Learning to Overlook Domain Style`, investigates the problem of source-free domain adaptive object detection, which considers privacy protection issues and assumes that source domain data is unaccessible. If you are interested, welcome to explore our [Paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Source-Free_Object_Detection_by_Learning_To_Overlook_Domain_Style_CVPR_2022_paper.pdf) and [Code](https://github.com/Flashkong/Source-Free-Object-Detection-by-Learning-to-Overlook-Domain-Style).
 
