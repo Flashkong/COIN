@@ -5,7 +5,7 @@
 
 
 <h5 align="center"> 
-<a href='https://openreview.net/pdf?id=S8SEjerTTg'><img src='https://img.shields.io/badge/📖%20-OpenReview-orange'></a>
+<a href='https://proceedings.neurips.cc/paper_files/paper/2024/file/2ce4f0b8e24c45318352068603153590-Paper-Conference.pdf'><img src='https://img.shields.io/badge/📖%20-OpenReview-orange'></a>
 <a href='https://huggingface.co/Flashkong/COIN/tree/main'><img src='https://img.shields.io/badge/🤗-HuggingFace-blue.svg'></a>
 
 [Shuaifeng Li](https://flashkong.github.io)<sup>1</sup>,
@@ -21,7 +21,7 @@
 
 <sup>2</sup>University of Shanghai for Science and Technology, <sup>3</sup>University of Surrey
 
-[`Paper`](https://openreview.net/pdf?id=S8SEjerTTg) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`RedNote`](http://xhslink.com/a/72l2748aVCr1) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412)
+[`Paper`](https://proceedings.neurips.cc/paper_files/paper/2024/file/2ce4f0b8e24c45318352068603153590-Paper-Conference.pdf) | [`Project`](https://flashkong.github.io/projects/coin) | [`Slides`](https://flashkong.github.io/files/COIN/COIN_slides.pdf) | [`Poster`](https://flashkong.github.io/files/COIN/COIN_poster.pdf) | [`Blog`](https://flashkong.github.io/blogs/coin/) | [`RedNote`](http://xhslink.com/a/72l2748aVCr1) | [`知乎`](https://zhuanlan.zhihu.com/p/11666611412)
 </h5>
 </div>
 
@@ -225,13 +225,16 @@ CKG network:
 If you find our work helpful for your research, please consider citing the following BibTeX entry.  
  
 ```bibtex
-@inproceedings{
-li2024cloud,
-title={Cloud Object Detector Adaptation by Integrating Different Source Knowledge},
-author={Shuaifeng Li and Mao Ye and Lihua Zhou and Nianxin Li and Siying Xiao and Song Tang and Xiatian Zhu},
-booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-year={2024},
-url={https://openreview.net/forum?id=S8SEjerTTg}
+@inproceedings{NEURIPS2024_2ce4f0b8,
+ author = {Li, Shuaifeng and Ye, Mao and Zhou, Lihua and Li, Nianxin and Xiao, Siying and Tang, Song and Zhu, Xiatian},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+ pages = {25251--25283},
+ publisher = {Curran Associates, Inc.},
+ title = {Cloud Object Detector Adaptation by Integrating Different Source Knowledge},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/2ce4f0b8e24c45318352068603153590-Paper-Conference.pdf},
+ volume = {37},
+ year = {2024}
 }
 ```
 ## ❤️ Acknowledgement
