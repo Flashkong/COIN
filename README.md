@@ -5,7 +5,7 @@
 
 
 <h5 align="center"> 
-<a href='https://proceedings.neurips.cc/paper_files/paper/2024/file/2ce4f0b8e24c45318352068603153590-Paper-Conference.pdf'><img src='https://img.shields.io/badge/📖%20-OpenReview-orange'></a>
+<a href='https://neurips.cc/virtual/2024/poster/95127'><img src='https://img.shields.io/badge/📖%20-NeurIPS-orange'></a>
 <a href='https://huggingface.co/Flashkong/COIN/tree/main'><img src='https://img.shields.io/badge/🤗-HuggingFace-blue.svg'></a>
 
 [Shuaifeng Li](https://flashkong.github.io)<sup>1</sup>,
